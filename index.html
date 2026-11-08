@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Matheus Mosconi Sarvas — Portfólio</title>
+<meta name="description" content="Matheus Mosconi Sarvas, analista de desenvolvimento de sistemas. Full stack TypeScript: Bun, React, Postgres e cloud na Oracle OCI.">
+<meta property="og:title" content="Matheus Mosconi Sarvas — Portfólio">
+<meta property="og:description" content="Full stack TypeScript construindo software que serve pessoas.">
+<link rel="icon" href="avatar.jpg">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&family=JetBrains+Mono:wght@400;500&display=swap">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script src="https://cdn.jsdelivr.net/npm/react@18.3.1/umd/react.production.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/framer-motion@10.16.4/dist/framer-motion.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.5/babel.min.js"></script>
+<style>
+:root{--bg:#000;--fg:#f4f4f4;--dim:#8a8a8a;--line:rgba(255,255,255,.1);color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{background:var(--bg);color:var(--fg);font-family:'Inter',system-ui,sans-serif;margin:0;-webkit-font-smoothing:antialiased}
+.mono{font-family:'JetBrains Mono',ui-monospace,Menlo,monospace}
+.glass{background:rgba(255,255,255,.03);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border:1px solid var(--line);border-radius:6px}
+.grid-bg{background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:80px 80px}
+::selection{background:#fff;color:#000}
+html{scrollbar-width:thin;scrollbar-color:#1c2c52 #000}
+::-webkit-scrollbar{width:10px;height:10px}
+::-webkit-scrollbar-track{background:#000;border-left:1px solid rgba(255,255,255,.1)}
+::-webkit-scrollbar-thumb{background:#14234a;border:1px solid rgba(255,255,255,.14);border-radius:0}
+::-webkit-scrollbar-thumb:hover{background:#27447f}
+::-webkit-scrollbar-corner{background:#000}
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+const { useState, useEffect, useRef } = React;
+const { motion, useMotionValue, useSpring, useTransform, useInView } = Motion;
+const E = [0.25, 0.1, 0.25, 1];
+const GLYPHS = "01ABCDEF<>/\\_=+-[]{}#";
+
+function Decode({ text, className = "", delay = 0 }) {
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true, margin: "-10% 0px" });
+  const [out, setOut] = useState(text.replace(/\S/g, "·"));
+  useEffect(() => {
+    if (!inView) return;
+    let f = 0; const total = 18;
+    const t0 = setTimeout(() => {
+      const id = setInterval(() => {
+        f++;
+        const done = Math.floor((f / total) * text.length);
+        setOut(text.split("").map((c, i) => c === " " ? " " : i < done ? c : GLYPHS[Math.floor(Math.random() * GLYPHS.length)]).join(""));
+        if (f >= total) { clearInterval(id); setOut(text); }
+      }, 30);
+    }, delay);
+    return () => clearTimeout(t0);
+  }, [inView]);
+  return <span ref={ref} className={className} aria-label={text}>{out}</span>;
+}
+
+function Reveal({ children, delay = 0, className = "" }) {
+  return (
+    <motion.div className={className} initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-8% 0px" }} transition={{ duration: 0.4, ease: "easeOut", delay }}>
+      {children}
+    </motion.div>
+  );
+}
+
+function Corners({ a, b, c, d }) {
+  const cls = "mono absolute text-[10px] tracking-wider text-[#555] select-none";
+  return (<>
+    <span className={cls + " top-2 left-3"}>{a}</span>
+    <span className={cls + " top-2 right-3"}>{b}</span>
+    <span className={cls + " bottom-2 left-3"}>{c}</span>
+    <span className={cls + " bottom-2 right-3"}>{d}</span>
+  </>);
+}
+
+function DotField() {
+  const ref = useRef(null);
+  useEffect(() => {
+    const cv = ref.current, ctx = cv.getContext("2d");
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    let w, h, raf, mx = -999, my = -999, tx = -999, ty = -999, t = 0;
+    const resize = () => { const r = cv.getBoundingClientRect(); w = r.width; h = r.height; cv.width = w * dpr; cv.height = h * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0); };
+    resize(); window.addEventListener("resize", resize);
+    const move = (e) => { const r = cv.getBoundingClientRect(); tx = e.clientX - r.left; ty = e.clientY - r.top; };
+    const leave = () => { tx = -999; ty = -999; };
+    window.addEventListener("pointermove", move);
+    const step = 18;
+    const draw = () => {
+      t += 0.012; mx += (tx - mx) * 0.12; my += (ty - my) * 0.12;
+      ctx.clearRect(0, 0, w, h);
+      ctx.font = "10px JetBrains Mono, monospace"; ctx.textAlign = "center"; ctx.textBaseline = "middle";
+      const cx = w > 800 ? w * 0.68 : w / 2, cy = h * 0.52, R = Math.min(w, h) * 0.78;
+      for (let y = step / 2; y < h; y += step) for (let x = step / 2; x < w; x += step) {
+        const dx = x - cx, dy = y - cy, d = Math.hypot(dx, dy);
+        if (d > R) continue;
+        const z = Math.sqrt(1 - (d / R) ** 2);
+        const wave = Math.sin(d * 0.045 - t * 3) * 0.5 + 0.5;
+        const md = Math.hypot(x - mx, y - my);
+        const near = Math.max(0, 1 - md / 110);
+        const a = 0.12 + z * 0.35 * wave + near * 0.8;
+        const ox = near * ((x - mx) / (md + 1)) * 8, oy = near * ((y - my) / (md + 1)) * 8;
+        ctx.fillStyle = `rgba(${244 - near * 100 | 0},${244 - near * 70 | 0},255,${Math.min(a, 1)})`;
+        if (near > 0.15 || (wave > 0.82 && z > 0.5)) ctx.fillText(GLYPHS[(x * 7 + y * 13 + Math.floor(t * 4)) % GLYPHS.length], x + ox, y + oy);
+        else { ctx.beginPath(); ctx.arc(x + ox, y + oy, 0.8 + z * 0.9, 0, 6.283); ctx.fill(); }
+      }
+      raf = requestAnimationFrame(draw);
+    };
+    draw();
+    return () => { cancelAnimationFrame(raf); window.removeEventListener("resize", resize); window.removeEventListener("pointermove", move); };
+  }, []);
+  return <canvas ref={ref} className="absolute inset-0 w-full h-full block pointer-events-none" />;
+}
+
+function Tilt({ children, className = "" }) {
+  const ref = useRef(null);
+  const px = useMotionValue(0.5), py = useMotionValue(0.5);
+  const sx = useSpring(px, { stiffness: 200, damping: 30 }), sy = useSpring(py, { stiffness: 200, damping: 30 });
+  const rx = useTransform(sy, [0, 1], [5, -5]), ry = useTransform(sx, [0, 1], [-5, 5]);
+  const bg = useTransform([sx, sy], ([x, y]) => `radial-gradient(420px circle at ${x * 100}% ${y * 100}%, rgba(255,255,255,.10), transparent 55%)`);
+  const onMove = (e) => { const r = ref.current.getBoundingClientRect(); px.set((e.clientX - r.left) / r.width); py.set((e.clientY - r.top) / r.height); };
+  const onLeave = () => { px.set(0.5); py.set(0.5); };
+  return (
+    <div style={{ perspective: 1000 }}>
+      <motion.div ref={ref} onPointerMove={onMove} onPointerLeave={onLeave}
+        style={{ rotateX: rx, rotateY: ry, transformStyle: "preserve-3d" }} className={"glass relative overflow-hidden " + className}>
+        <motion.div className="absolute inset-0 pointer-events-none" style={{ background: bg }} />
+        {children}
+      </motion.div>
+    </div>
+  );
+}
+
+function SectionHead({ idx, title, meta }) {
+  return (
+    <div className="flex items-end justify-between border-b border-white/10 pb-4 mb-10">
+      <div>
+        <div className="mono text-xs text-[#8a8a8a] mb-2">[{idx}] <Decode text={meta} /></div>
+        <h2 className="text-3xl md:text-5xl font-semibold tracking-tight"><Decode text={title} /></h2>
+      </div>
+      <span className="mono text-[10px] text-[#555] hidden md:block">0x{idx}A · v0.0.1</span>
+    </div>
+  );
+}
+
+const SKILLS = [
+  ["linguagem", "TypeScript, JavaScript"],
+  ["frontend", "React, Next.js, Vite, Expo (React Native)"],
+  ["backend", "Bun, Node.js, Hono, better-auth, Drizzle ORM"],
+  ["dados", "PostgreSQL, Drizzle ORM, Prisma, modelagem de schema"],
+  ["infra", "Oracle Cloud (OCI), AWS, Vercel, Caddy, Cloudflare, e-mail transacional (Brevo)"],
+  ["containers", "Docker, Docker Compose, GHCR"],
+  ["versionamento", "GitHub, GitHub Actions (CI/CD)"],
+  ["arquitetura", "Full stack ponta a ponta: schema, API, UI e deploy"],
+  ["documentação", "Decisões de arquitetura registradas em markdown"],
+  ["formação", "Tecnólogo em ADS — Mackenzie (previsão 2028)"],
+];
+
+const EXP = [
+  ["Mar/2026 — atual", "Analista de Desenvolvimento de Sistemas", "Hubble HR Systems", "ATIVO"],
+  ["Ago/2025 — Mar/2026", "Analista de Suporte", "Grupo Hub", "CONCLUÍDO"],
+];
+
+const PROJECTS = [
+  { id: "01", name: "Mangr — finanças para casais", status: "Em desenvolvimento", tech: "Expo, Bun, Hono, PostgreSQL, Drizzle ORM, better-auth, pg-boss, Groq",
+    desc: "App financeiro com modo Individual e modo Casal. Lançamentos entram por texto, áudio ou comprovante, a IA estrutura os dados e a pessoa confirma.",
+    log: ["db: valores em centavos inteiros, migrations versionadas e soft delete", "arch: individual → casal sem migrar dados (scope personal | shared)", "ops: fila em cima do Postgres (pg-boss), sem Redis", "docs: arquitetura pública em github.com/matheusmsarvas-creator/mangr"] },
+  { id: "02", name: "Integra Teens — CRM de ministério", status: "Em evolução", tech: "Next.js 15, React 19, Prisma, PostgreSQL 17, better-auth, Docker, Caddy",
+    desc: "CRM do ministério de adolescentes: acompanha cada visitante até virar membro, mostra onde as pessoas se perdem no funil e organiza líderes em um organograma.",
+    log: ["sec: autorização por papel no servidor (middleware, layout, páginas e todas as actions)", "ops: trilha de auditoria de cada criação, edição e movimentação", "ops: Docker com build standalone, HTTPS automático via Caddy", "db: migração de SQLite para Postgres por script, sem perder usuários"] },
+  { id: "03", name: "Sistema de inscrição — Acampamento TeensIBP", status: "Completo", tech: "Bun, React, Vite, Hono, PostgreSQL, Drizzle ORM, better-auth, Brevo, Docker",
+    desc: "Sistema digital completo de inscrição para o acampamento do ministério de adolescentes da Igreja Bíblica da Paz, do schema do banco ao deploy.",
+    log: ["ux: formulário multi-etapas com rascunho persistido (localStorage)", "ops: audit log e controle de pagamentos com parcelas via Pix", "ops: abertura e fechamento das inscrições por toggle", "ops: fila escalonada de e-mails via Brevo (limite diário)", "docs: decisões de arquitetura registradas em markdown"] },
+  { id: "04", name: "Cloud foundation — Oracle OCI", status: "Em produção", tech: "Oracle Cloud (Ampere A1), Docker, Caddy, GitHub Actions, GHCR, Cloudflare",
+    desc: "Infraestrutura própria que publica os sistemas acima dentro do plano Always Free: VM ARM provisionada por script, containers, HTTPS automático e backup.",
+    log: ["ops: script OCI CLI que tenta até haver capacidade na região", "ops: cloud-init com Docker, firewall, fuso e swap", "ci: imagens publicadas no GHCR por GitHub Actions e SSH deploy", "docs: github.com/matheusmsarvas-creator/cloud-foundation"] },
+];
+
+function Nav() {
+  return (
+    <header className="fixed top-0 inset-x-0 z-50 border-b border-white/10 bg-black/50 backdrop-blur-xl" style={{ paddingTop: "env(safe-area-inset-top,0px)" }}>
+      <div className="max-w-6xl mx-auto px-5 h-12 flex items-center justify-between mono text-xs">
+        <span>msarvas<span className="text-[#8a8a8a]">/portfolio</span></span>
+        <nav className="flex gap-5 text-[#8a8a8a]">
+          {[["sobre", "#sobre"], ["trajetória", "#exp"], ["projetos", "#projetos"], ["contato", "#contato"]].map(([l, h]) =>
+            <a key={h} href={h} className="hover:text-white transition-colors">{l}</a>)}
+        </nav>
+      </div>
+    </header>
+  );
+}
+
+function Hero() {
+  return (
+    <section className="relative min-h-screen grid-bg flex items-center pt-20 overflow-hidden">
+      <DotField />
+      <div className="absolute inset-0 pointer-events-none bg-gradient-to-r from-black/80 via-black/30 to-transparent" />
+      <span className="mono absolute bottom-4 left-5 text-[10px] text-[#555] select-none">render::dot-matrix · v0.0.1</span>
+      <div className="relative z-10 max-w-6xl mx-auto px-5 w-full grid gap-10 items-center">
+        <div>
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.4 }} className="mono text-xs text-[#8a8a8a] mb-6">
+            [b.64] TWF0aGV1cw== · São Paulo, BR · -23.55, -46.63
+          </motion.div>
+          <h1 className="text-[clamp(2.8rem,9vw,7.5rem)] leading-[0.92] font-extrabold tracking-tighter">
+            <Decode text="Código" /><br /><Decode text="com precisão." delay={150} />
+          </h1>
+          <Reveal delay={0.3} className="mt-8 max-w-xl">
+            <p className="text-lg text-[#bdbdbd]">Matheus Mosconi Sarvas. Analista de Desenvolvimento de Sistemas na Hubble HR Systems. Full stack TypeScript construindo software que serve pessoas.</p>
+            <div className="mono text-xs mt-6 flex flex-wrap gap-3">
+              <a href="#projetos" className="px-4 py-2 bg-white text-black rounded-sm hover:bg-[#d8d8d8] transition-colors">ver_projetos →</a>
+              <a href="#contato" className="px-4 py-2 border border-white/20 rounded-sm hover:border-white/60 transition-colors">contato</a>
+            </div>
+          </Reveal>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function About() {
+  return (
+    <section id="sobre" className="max-w-6xl mx-auto px-5 py-28">
+      <SectionHead idx="01" title="Sobre / Skills" meta="README.md" />
+      <div className="grid md:grid-cols-[1fr_1.4fr] gap-10">
+        <Reveal>
+          <p className="text-xl text-[#d0d0d0] leading-relaxed">Comecei no suporte, entendendo problemas reais de quem usa o sistema. Hoje desenvolvo software na Hubble, e levo esse olhar para tudo que construo.</p>
+          <p className="mono text-xs text-[#8a8a8a] mt-6">// decisões, não strings.</p>
+        </Reveal>
+        <Reveal delay={0.1}>
+          <div className="glass relative p-6 pt-10 pb-10 mono text-sm">
+            <Corners a="$ cat skills.conf" b="[b.64]" c="utf-8" d="10 rows" />
+            {SKILLS.map(([k, v]) => (
+              <div key={k} className="grid grid-cols-[130px_1fr] gap-3 py-2.5 border-b border-white/10 last:border-0">
+                <span className="text-[#8a8a8a]">{k}</span><span>{v}</span>
+              </div>
+            ))}
+          </div>
+        </Reveal>
+      </div>
+    </section>
+  );
+}
+
+function Experience() {
+  return (
+    <section id="exp" className="max-w-6xl mx-auto px-5 py-28">
+      <SectionHead idx="02" title="Trajetória" meta="git log --career" />
+      <div className="border-t border-white/10">
+        {EXP.map(([date, role, org, st], i) => (
+          <Reveal key={role} delay={i * 0.08}>
+            <div className="grid md:grid-cols-[200px_1fr_auto] gap-2 md:gap-8 py-7 border-b border-white/10 items-baseline hover:bg-white/[0.02] transition-colors">
+              <span className="mono text-xs text-[#8a8a8a]">{date}</span>
+              <div><div className="text-xl font-medium">{role}</div><div className="mono text-sm text-[#8a8a8a] mt-1">@ {org}</div></div>
+              <span className="mono text-[10px] border border-white/20 px-2 py-1 rounded-sm">{st}</span>
+            </div>
+          </Reveal>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function Projects() {
+  return (
+    <section id="projetos" className="max-w-6xl mx-auto px-5 py-28">
+      <SectionHead idx="03" title="Projetos" meta="benchmark.log" />
+      <div className="grid gap-6">
+        {PROJECTS.map((p, i) => (
+          <Reveal key={p.id} delay={i * 0.1}>
+            <Tilt className="p-6 pt-10 pb-10 h-full">
+              <Corners a={`#${p.id}`} b="[b.64]" c={`0x${p.id}F`} d="v0.0.1" />
+              <h3 className="text-2xl font-semibold tracking-tight mb-3">{p.name}</h3>
+              <p className="text-[#bdbdbd] mb-6">{p.desc}</p>
+              <div className="mono text-xs space-y-1.5 border-t border-white/10 pt-4">
+                <div><span className="text-[#8a8a8a]">Status:</span> {p.status} <span className="text-[#555]">|</span> <span className="text-[#8a8a8a]">Tech:</span> [{p.tech}]</div>
+                {p.log.map((l) => <div key={l} className="text-[#8a8a8a]">&gt; {l}</div>)}
+              </div>
+            </Tilt>
+          </Reveal>
+        ))}
+      </div>
+      <p className="mono text-xs text-[#555] mt-6">// projetos 02 e 03: ministério TeensIBP · Igreja Bíblica da Paz · código privado, estudo de caso</p>
+    </section>
+  );
+}
+
+function Footer() {
+  return (
+    <footer id="contato" className="border-t border-white/10">
+      <div className="max-w-6xl mx-auto px-5 py-20 grid md:grid-cols-3 gap-10 mono text-xs">
+        <div>
+          <div className="text-[#8a8a8a] mb-3">contato</div>
+          <a className="block hover:underline" href="https://github.com/matheusmsarvas-creator">github.com/matheusmsarvas-creator</a>
+          <a className="block hover:underline mt-1" href="https://linkedin.com/in/matheusmosconisarvas">linkedin.com/in/matheusmosconisarvas</a>
+        </div>
+        <div>
+          <div className="text-[#8a8a8a] mb-3">localização</div>
+          São Paulo, Brasil
+        </div>
+        <div className="md:text-right text-[#8a8a8a]">
+          <div className="text-2xl text-white tracking-[0.4em]">∵ ⩆ ⩆ ∵</div>
+          <div className="mt-3">© 2026 · v0.0.1 · [b.64]</div>
+        </div>
+      </div>
+    </footer>
+  );
+}
+
+function Cursor() {
+  const ref = useRef(null);
+  useEffect(() => {
+    const cv = ref.current, ctx = cv.getContext("2d");
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    let w, h, raf, mx = -999, my = -999, tx = -999, ty = -999, pulses = [];
+    const resize = () => { w = window.innerWidth; h = window.innerHeight; cv.width = w * dpr; cv.height = h * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0); };
+    resize();
+    const move = (e) => { if (e.pointerType === "touch") return; tx = e.clientX; ty = e.clientY; if (mx < 0) { mx = tx; my = ty; } };
+    const down = (e) => { const n = performance.now(); for (let i = 0; i < 4; i++) pulses.push({ x: e.clientX, y: e.clientY, t0: n + i * 160, amp: 1 - i * 0.18 }); if (pulses.length > 20) pulses.splice(0, pulses.length - 20); };
+    window.addEventListener("resize", resize); window.addEventListener("pointermove", move); window.addEventListener("pointerdown", down);
+    const step = 40, LIFE = 1400;
+    const draw = (now) => {
+      mx += (tx - mx) * 0.08; my += (ty - my) * 0.08;
+      ctx.clearRect(0, 0, w, h);
+      if (tx > 0) {
+        const g = ctx.createRadialGradient(mx, my, 0, mx, my, 200);
+        g.addColorStop(0, "rgba(50,90,190,0.13)"); g.addColorStop(1, "rgba(50,90,190,0)");
+        ctx.fillStyle = g; ctx.fillRect(mx - 200, my - 200, 400, 400);
+      }
+      ctx.font = "9px JetBrains Mono, monospace"; ctx.textAlign = "center"; ctx.textBaseline = "middle";
+      pulses = pulses.filter((p) => now - p.t0 < LIFE);
+      for (let y = step / 2; y < h; y += step) for (let x = step / 2; x < w; x += step) {
+        const seed = ((x * 73856093) ^ (y * 19349663)) >>> 0;
+        const special = seed % 29 === 0;
+        const md = Math.hypot(x - mx, y - my);
+        const near = Math.max(0, 1 - md / 220);
+        let boost = 0, ox = ((x - mx) / (md + 1)) * near * 5, oy = ((y - my) / (md + 1)) * near * 5;
+        for (const p of pulses) {
+          const age = (now - p.t0) / LIFE; if (age < 0) continue; const d = Math.hypot(x - p.x, y - p.y);
+          const k = Math.max(0, 1 - Math.abs(d - age * 520) / 50) * (1 - age) * p.amp;
+          if (k > 0) { boost += k; ox += ((x - p.x) / (d + 1)) * k * 6; oy += ((y - p.y) / (d + 1)) * k * 6; }
+        }
+        const a = (special ? 0.2 : 0.05) + near * 0.3 + boost * 0.5;
+        const blue = special || near > 0.3 || boost > 0.1;
+        ctx.fillStyle = `rgba(${blue ? "95,140,240" : "200,210,230"},${Math.min(a, 0.8)})`;
+        if (boost > 0.35 || near > 0.8) ctx.fillText(GLYPHS[seed % GLYPHS.length], x + ox, y + oy);
+        else { ctx.beginPath(); ctx.arc(x + ox, y + oy, special ? 1.3 : 0.8 + near * 0.8, 0, 6.283); ctx.fill(); }
+      }
+      raf = requestAnimationFrame(draw);
+    };
+    raf = requestAnimationFrame(draw);
+    return () => { cancelAnimationFrame(raf); window.removeEventListener("resize", resize); window.removeEventListener("pointermove", move); window.removeEventListener("pointerdown", down); };
+  }, []);
+  return (<>
+    <div className="fixed inset-0 -z-20 pointer-events-none" style={{ background: "radial-gradient(60% 50% at 85% 0%, rgba(14,34,82,.55), transparent 70%), radial-gradient(50% 45% at 0% 100%, rgba(10,26,64,.45), transparent 70%), radial-gradient(40% 40% at 50% 55%, rgba(10,22,52,.25), transparent 70%)" }} />
+    <canvas ref={ref} className="fixed inset-0 w-full h-full -z-10 pointer-events-none" />
+  </>);
+}
+
+function App() {
+  return (<><Cursor /><Nav /><Hero /><About /><Experience /><Projects /><Footer /></>);
+}
+ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+</script>
+</body>
+</html>

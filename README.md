@@ -4,8 +4,10 @@
 
 # Matheus Mosconi Sarvas · Dev
 
-**Desenvolvedor full stack · TypeScript, Bun e cloud**
+**Analista de Desenvolvimento de Sistemas · Full stack TypeScript**
 Construo produtos do banco de dados à nuvem: API, web, mobile, CI/CD e infraestrutura própria.
+
+[![Portfólio](https://img.shields.io/badge/Portf%C3%B3lio-000000?style=for-the-badge&logo=githubpages&logoColor=white)](https://matheusmsarvas-creator.github.io/matheusmsarvas-creator/)
 
 [![E-mail](https://img.shields.io/badge/E--mail-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:mamosarvas@gmail.com)
 
@@ -15,15 +17,17 @@ Construo produtos do banco de dados à nuvem: API, web, mobile, CI/CD e infraest
 
 ## Sobre
 
-Estudante e desenvolvedor que gosta de resolver problemas reais de ponta a ponta. Nos meus projetos eu decido a stack, modelo os dados, escrevo a API e a interface, automatizo o deploy e mantenho a infraestrutura rodando. Documento o **porquê** de cada decisão técnica, não só o como.
+Analista de Desenvolvimento de Sistemas na **Hubble HR Systems** (desde mar/2026) e estudante de Tecnologia em Análise e Desenvolvimento de Sistemas no **Mackenzie** (previsão 2028). Comecei no suporte, entendendo os problemas de quem usa o sistema, e levo esse olhar para tudo que construo. Nos meus projetos pessoais eu decido a stack, modelo os dados, escrevo a API e a interface, automatizo o deploy e mantenho a infraestrutura rodando. Documento o **porquê** de cada decisão técnica, não só o como.
 
 ## Projetos em destaque
+
+O Mangr tem a arquitetura pública. Integra Teens e Acampamento TeensIBP têm código privado (dados de adolescentes); os estudos de caso, com stack e decisões, estão no [portfólio](https://matheusmsarvas-creator.github.io/matheusmsarvas-creator/).
 
 | Projeto | O que é | Stack |
 |---|---|---|
 | [**Mangr**](https://github.com/matheusmsarvas-creator/mangr) | App de finanças para casais (modo individual e casal), com lançamentos por IA a partir de comprovantes, texto e áudio | Expo/React Native, Bun, Hono, Postgres, Drizzle, Better Auth, pg-boss, Groq |
-| [**Integra Teens**](https://github.com/matheusmsarvas-creator/integra-teens) | CRM de um ministério de adolescentes: funil do visitante até membro, líderes, organograma e eventos | Next.js 15, React 19, Prisma, Postgres 17, Better Auth, Docker, Caddy |
-| [**Acampamento TeensIBP**](https://github.com/matheusmsarvas-creator/teensibp-backend) | Inscrição digital e painel administrativo do acampamento anual (pagamentos, autorizações, quartos, e-mails) | Hono, Drizzle, Postgres, React + Vite, nginx, Brevo, GHCR |
+| **Integra Teens** | CRM de um ministério de adolescentes: funil do visitante até membro, líderes, organograma e eventos | Next.js 15, React 19, Prisma, Postgres 17, Better Auth, Docker, Caddy |
+| **Acampamento TeensIBP** | Inscrição digital e painel administrativo do acampamento anual (pagamentos, autorizações, quartos, e-mails) | Hono, Drizzle, Postgres, React + Vite, nginx, Brevo, GHCR |
 
 ## Stack
 
