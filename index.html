@@ -167,7 +167,7 @@ const EXP = [
 const PROJECTS = [
   { id: "01", name: "Mangr — finanças para casais", status: "Em desenvolvimento", tech: "Expo, Bun, Hono, PostgreSQL, Drizzle ORM, better-auth, pg-boss, Groq",
     desc: "App financeiro com modo Individual e modo Casal. Lançamentos entram por texto, áudio ou comprovante, a IA estrutura os dados e a pessoa confirma.",
-    log: ["db: valores em centavos inteiros, migrations versionadas e soft delete", "arch: individual → casal sem migrar dados (scope personal | shared)", "ops: fila em cima do Postgres (pg-boss), sem Redis", "docs: arquitetura pública em github.com/matheusmsarvas-creator/mangr"] },
+    log: ["db: valores em centavos inteiros, migrations versionadas e soft delete", "arch: individual → casal sem migrar dados (scope personal | shared)", "ops: fila em cima do Postgres (pg-boss), sem Redis", "docs: arquitetura pública em github.com/mathsarvas-dev/mangr"] },
   { id: "02", name: "Integra Teens — CRM de ministério", status: "Em evolução", tech: "Next.js 15, React 19, Prisma, PostgreSQL 17, better-auth, Docker, Caddy",
     desc: "CRM do ministério de adolescentes: acompanha cada visitante até virar membro, mostra onde as pessoas se perdem no funil e organiza líderes em um organograma.",
     log: ["sec: autorização por papel no servidor (middleware, layout, páginas e todas as actions)", "ops: trilha de auditoria de cada criação, edição e movimentação", "ops: Docker com build standalone, HTTPS automático via Caddy", "db: migração de SQLite para Postgres por script, sem perder usuários"] },
@@ -176,7 +176,7 @@ const PROJECTS = [
     log: ["ux: formulário multi-etapas com rascunho persistido (localStorage)", "ops: audit log e controle de pagamentos com parcelas via Pix", "ops: abertura e fechamento das inscrições por toggle", "ops: fila escalonada de e-mails via Brevo (limite diário)", "docs: decisões de arquitetura registradas em markdown"] },
   { id: "04", name: "Cloud foundation — Oracle OCI", status: "Em produção", tech: "Oracle Cloud (Ampere A1), Docker, Caddy, GitHub Actions, GHCR, Cloudflare",
     desc: "Infraestrutura própria que publica os sistemas acima dentro do plano Always Free: VM ARM provisionada por script, containers, HTTPS automático e backup.",
-    log: ["ops: script OCI CLI que tenta até haver capacidade na região", "ops: cloud-init com Docker, firewall, fuso e swap", "ci: imagens publicadas no GHCR por GitHub Actions e SSH deploy", "docs: github.com/matheusmsarvas-creator/cloud-foundation"] },
+    log: ["ops: script OCI CLI que tenta até haver capacidade na região", "ops: cloud-init com Docker, firewall, fuso e swap", "ci: imagens publicadas no GHCR por GitHub Actions e SSH deploy", "docs: github.com/mathsarvas-dev/cloud-foundation"] },
 ];
 
 function Nav() {
@@ -293,7 +293,7 @@ function Footer() {
       <div className="max-w-6xl mx-auto px-5 py-20 grid md:grid-cols-3 gap-10 mono text-xs">
         <div>
           <div className="text-[#8a8a8a] mb-3">contato</div>
-          <a className="block hover:underline" href="https://github.com/matheusmsarvas-creator">github.com/matheusmsarvas-creator</a>
+          <a className="block hover:underline" href="https://github.com/mathsarvas-dev">github.com/mathsarvas-dev</a>
           <a className="block hover:underline mt-1" href="https://linkedin.com/in/matheusmosconisarvas">linkedin.com/in/matheusmosconisarvas</a>
         </div>
         <div>

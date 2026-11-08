@@ -1,4 +1,4 @@
-﻿<div align="center">
+<div align="center">
 
 <img src="avatar.jpg" width="160" style="border-radius:50%" alt="Matheus Mosconi Sarvas" />
 
@@ -7,7 +7,7 @@
 **Analista de Desenvolvimento de Sistemas · Full stack TypeScript**
 Construo produtos do banco de dados à nuvem: API, web, mobile, CI/CD e infraestrutura própria.
 
-[![Portfólio](https://img.shields.io/badge/Portf%C3%B3lio-000000?style=for-the-badge&logo=githubpages&logoColor=white)](https://matheusmsarvas-creator.github.io/matheusmsarvas-creator/)
+[![Portfólio](https://img.shields.io/badge/Portf%C3%B3lio-000000?style=for-the-badge&logo=githubpages&logoColor=white)](https://mathsarvas-dev.github.io/mathsarvas-dev/)
 
 [![E-mail](https://img.shields.io/badge/E--mail-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:mamosarvas@gmail.com)
 
@@ -21,11 +21,11 @@ Analista de Desenvolvimento de Sistemas na **Hubble HR Systems** (desde mar/2026
 
 ## Projetos em destaque
 
-O Mangr tem a arquitetura pública. Integra Teens e Acampamento TeensIBP têm código privado (dados de adolescentes); os estudos de caso, com stack e decisões, estão no [portfólio](https://matheusmsarvas-creator.github.io/matheusmsarvas-creator/).
+O Mangr tem a arquitetura pública. Integra Teens e Acampamento TeensIBP têm código privado (dados de adolescentes); os estudos de caso, com stack e decisões, estão no [portfólio](https://mathsarvas-dev.github.io/mathsarvas-dev/).
 
 | Projeto | O que é | Stack |
 |---|---|---|
-| [**Mangr**](https://github.com/matheusmsarvas-creator/mangr) | App de finanças para casais (modo individual e casal), com lançamentos por IA a partir de comprovantes, texto e áudio | Expo/React Native, Bun, Hono, Postgres, Drizzle, Better Auth, pg-boss, Groq |
+| [**Mangr**](https://github.com/mathsarvas-dev/mangr) | App de finanças para casais (modo individual e casal), com lançamentos por IA a partir de comprovantes, texto e áudio | Expo/React Native, Bun, Hono, Postgres, Drizzle, Better Auth, pg-boss, Groq |
 | **Integra Teens** | CRM de um ministério de adolescentes: funil do visitante até membro, líderes, organograma e eventos | Next.js 15, React 19, Prisma, Postgres 17, Better Auth, Docker, Caddy |
 | **Acampamento TeensIBP** | Inscrição digital e painel administrativo do acampamento anual (pagamentos, autorizações, quartos, e-mails) | Hono, Drizzle, Postgres, React + Vite, nginx, Brevo, GHCR |
 
@@ -45,7 +45,7 @@ O Mangr tem a arquitetura pública. Integra Teens e Acampamento TeensIBP têm c�
 
 ## Cloud e infraestrutura
 
-Eu mesmo publico e opero meus sistemas na **Oracle Cloud (Always Free, ARM Ampere A1)**. Detalhes no repositório [**cloud-foundation**](https://github.com/matheusmsarvas-creator/cloud-foundation):
+Eu mesmo publico e opero meus sistemas na **Oracle Cloud (Always Free, ARM Ampere A1)**. Detalhes no repositório [**cloud-foundation**](https://github.com/mathsarvas-dev/cloud-foundation):
 
 - Provisionamento automatizado da VM (script OCI CLI que tenta até haver capacidade) e `cloud-init` com Docker, firewall, fuso e swap
 - Imagens publicadas no **GitHub Container Registry** por GitHub Actions, multi-arquitetura (amd64 e arm64)
