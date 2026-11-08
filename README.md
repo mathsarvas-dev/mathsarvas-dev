@@ -1,4 +1,4 @@
-<div align="center">
+﻿<div align="center">
 
 <img src="avatar.jpg" width="160" style="border-radius:50%" alt="Matheus Mosconi Sarvas" />
 
@@ -23,7 +23,7 @@ Estudante e desenvolvedor que gosta de resolver problemas reais de ponta a ponta
 |---|---|---|
 | [**Mangr**](https://github.com/matheusmsarvas-creator/mangr) | App de finanças para casais (modo individual e casal), com lançamentos por IA a partir de comprovantes, texto e áudio | Expo/React Native, Bun, Hono, Postgres, Drizzle, Better Auth, pg-boss, Groq |
 | [**Integra Teens**](https://github.com/matheusmsarvas-creator/integra-teens) | CRM de um ministério de adolescentes: funil do visitante até membro, líderes, organograma e eventos | Next.js 15, React 19, Prisma, Postgres 17, Better Auth, Docker, Caddy |
-| [**Acampamento TeensIBP**](https://github.com/matheusmsarvas-creator/backend) | Inscrição digital e painel administrativo do acampamento anual (pagamentos, autorizações, quartos, e-mails) | Hono, Drizzle, Postgres, React + Vite, nginx, Brevo, GHCR |
+| [**Acampamento TeensIBP**](https://github.com/matheusmsarvas-creator/teensibp-backend) | Inscrição digital e painel administrativo do acampamento anual (pagamentos, autorizações, quartos, e-mails) | Hono, Drizzle, Postgres, React + Vite, nginx, Brevo, GHCR |
 
 ## Stack
 
