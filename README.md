@@ -27,7 +27,7 @@ Analista de Desenvolvimento de Sistemas na **Hubble HR Systems** (desde mar/2026
 - Recomendação de vagas com IA: embeddings no Bedrock, pgvector, até 3 currículos por candidato e perfil ideal com filtros
 - Extração de currículos em PDF com modelos Claude e roteador que alterna modelos quando a cota esgota
 - Módulo de helpdesk, central de ajuda, base de conhecimento e relatórios semanais para gestores
-- AWS (EC2, ECS, ECR, load balancer, target groups), beta e produção, CloudWatch e New Relic
+- AWS (EC2, ECS, ECR, RDS, S3, IAM, load balancer, target groups), beta e produção, CloudWatch e New Relic
 - GitHub Actions (deploy), documentação automática e testes unitários, de integração e de performance
 - Integrações de agenda com Microsoft e Google e publicação no Google Jobs
 
