@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="252" viewBox="0 0 440 252" role="img">
+<defs>
+<radialGradient id="ai" cx="100%" cy="0%" r="80%"><stop offset="0" stop-color="#0e2252" stop-opacity=".7"/><stop offset="1" stop-color="#0e2252" stop-opacity="0"/></radialGradient>
+<radialGradient id="bi" cx="0%" cy="100%" r="70%"><stop offset="0" stop-color="#0a1a40" stop-opacity=".5"/><stop offset="1" stop-color="#0a1a40" stop-opacity="0"/></radialGradient>
+<pattern id="gi" width="60" height="60" patternUnits="userSpaceOnUse"><path d="M60 0H0V60" fill="none" stroke="#fff" stroke-opacity=".06"/></pattern>
+</defs>
+<rect width="440" height="252" rx="6" fill="#000"/>
+<rect width="440" height="252" rx="6" fill="url(#ai)"/><rect width="440" height="252" rx="6" fill="url(#bi)"/>
+<rect width="440" height="252" rx="6" fill="url(#gi)"/>
+<rect width="440" height="252" rx="6" fill="#fff" fill-opacity=".02"/>
+<g font-family="JetBrains Mono, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#555" letter-spacing="1"><text x="14" y="20">#03</text><text x="426" y="20" text-anchor="end">[b.64]</text><text x="14" y="240">0x03F</text><text x="426" y="240" text-anchor="end">v0.0.1</text></g>
+<text x="28" y="66" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="24" font-weight="800" fill="#f4f4f4" letter-spacing="-.6">Integra Teens</text><text x="28" y="90" font-family="JetBrains Mono, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" fill="#8a8a8a">código privado · estudo de caso →</text><text x="28" y="128" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="14.5" fill="#bdbdbd">CRM de um ministério de adolescentes: funil,</text><text x="28" y="150" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="14.5" fill="#bdbdbd">líderes em organograma, papéis de acesso e</text><text x="28" y="172" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="14.5" fill="#bdbdbd">trilha de auditoria.</text><line x1="28" x2="412" y1="194" y2="194" stroke="#fff" stroke-opacity=".12"/><text x="28" y="218" font-family="JetBrains Mono, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" fill="#8fb0ff">Next.js · Prisma · PostgreSQL · Docker</text>
+<rect x=".5" y=".5" width="439" height="251" rx="6" fill="none" stroke="#fff" stroke-opacity=".14"/>
+</svg>
