@@ -1,81 +1,77 @@
 <div align="center">
 
-<img src="avatar.jpg" width="160" style="border-radius:50%" alt="Matheus Mosconi Sarvas" />
+<a href="https://mathsarvas-dev.github.io/mathsarvas-dev/"><img src="header.svg" alt="Matheus Mosconi Sarvas, Dev. Engenharia de ponta a ponta." width="100%"></a>
 
-# Matheus Mosconi Sarvas · Dev
+<br>
 
-**Analista de Desenvolvimento de Sistemas · Full stack TypeScript**
-Construo produtos do banco de dados à nuvem: API, web, mobile, CI/CD e infraestrutura própria.
-
-[![Portfólio](https://img.shields.io/badge/Portf%C3%B3lio-000000?style=for-the-badge&logo=githubpages&logoColor=white)](https://mathsarvas-dev.github.io/mathsarvas-dev/)
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/matheus-mosconi-sarvas/)
-[![E-mail](https://img.shields.io/badge/E--mail-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:mamosarvas@gmail.com)
+[`portfólio →`](https://mathsarvas-dev.github.io/mathsarvas-dev/) &nbsp;·&nbsp; [`linkedin`](https://www.linkedin.com/in/matheus-mosconi-sarvas/) &nbsp;·&nbsp; [`e-mail`](mailto:mamosarvas@gmail.com)
 
 </div>
 
----
+<br>
 
-## Sobre
+```text
+[01] README.md ────────────────────────────────────────────────────────
 
-Analista de Desenvolvimento de Sistemas na **Hubble HR Systems** (desde mar/2026) e estudante de Tecnologia em Análise e Desenvolvimento de Sistemas no **Mackenzie** (previsão 2028), com formações em Full Stack Web Development e Java na **Rocketseat**. Comecei no suporte, entendendo os problemas de quem usa o sistema, e levo esse olhar para tudo que construo. Nos meus projetos pessoais eu decido a stack, modelo os dados, escrevo a API e a interface, automatizo o deploy e mantenho a infraestrutura rodando. Documento o **porquê** de cada decisão técnica, não só o como.
+  comecei no suporte, olhando o problema de quem usa o sistema.
+  hoje escrevo o sistema: do schema do banco ao deploy.
 
-## Trabalho atual
+  // decisões, não strings.
+```
 
-**Hubble HR Systems** · Analista de Desenvolvimento de Sistemas (desde mar/2026)
+```text
+[02] git log --career ─────────────────────────────────────────────────
 
-- Recomendação de vagas com IA: embeddings no Bedrock, pgvector, até 3 currículos por candidato e perfil ideal com filtros
-- Extração de currículos em PDF com modelos Claude e roteador que alterna modelos quando a cota esgota
-- Módulo de helpdesk, central de ajuda, base de conhecimento e relatórios semanais para gestores
-- AWS (EC2, ECS, ECR, RDS, S3, IAM, load balancer, target groups), beta e produção, CloudWatch e New Relic
-- GitHub Actions (deploy), documentação automática e testes unitários, de integração e de performance
-- Integrações de agenda com Microsoft e Google e publicação no Google Jobs
+  mar/2026 — atual   Analista de Desenvolvimento de Sistemas   @ Hubble HR Systems   ATIVO
+  ago/2025 — mar/2026 Analista de Suporte                      @ Grupo Hub           CONCLUÍDO
 
-## Projetos em destaque
+  hubble
+  > ai    recomendação de vagas por embeddings (Bedrock + pgvector)
+  > ai    extração de currículos em PDF com Claude e roteador de modelos
+  > arch  helpdesk, central de ajuda, base de conhecimento e relatórios semanais
+  > ops   AWS: EC2, ECS, ECR, RDS, S3, IAM, load balancer, CloudWatch, New Relic
+  > ci    GitHub Actions, OpenAPI, TypeDoc, JSDoc, Storybook, testes de unidade,
+          integração e performance
+  > int   agenda Microsoft e Google via API, Google Jobs
+```
 
-O Mangr tem a arquitetura pública. Integra Teens e Acampamento TeensIBP têm código privado (dados de adolescentes); os estudos de caso, com stack e decisões, estão no [portfólio](https://mathsarvas-dev.github.io/mathsarvas-dev/).
+```text
+[03] cat skills.conf ──────────────────────────────────────────────────
 
-| Projeto | O que é | Stack |
-|---|---|---|
-| [**Mangr**](https://github.com/mathsarvas-dev/mangr) | App de finanças para casais (modo individual e casal), com lançamentos por IA a partir de comprovantes, texto e áudio | Expo/React Native, Bun, Hono, Postgres, Drizzle, Better Auth, pg-boss, Groq |
-| **Integra Teens** | CRM de um ministério de adolescentes: funil do visitante até membro, líderes, organograma e eventos | Next.js 15, React 19, Prisma, Postgres 17, Better Auth, Docker, Caddy |
-| **Acampamento TeensIBP** | Inscrição digital e painel administrativo do acampamento anual (pagamentos, autorizações, quartos, e-mails) | Hono, Drizzle, Postgres, React + Vite, nginx, Brevo, GHCR |
+  linguagem        TypeScript, JavaScript, Java (em formação)
+  frontend         React, Next.js, Vite, Expo, Tailwind, CSS Modules
+  backend          Bun, Node.js, Hono, better-auth, Drizzle, Prisma
+  dados            PostgreSQL, pgvector
+  ia               Amazon Bedrock, Claude, embeddings, busca vetorial
+  infra            AWS, Oracle Cloud, Docker, Caddy, Cloudflare
+  observabilidade  CloudWatch, New Relic
+  qualidade        testes unitários, de integração e de performance
+  formação         ADS no Mackenzie (2028) · Rocketseat: Full Stack e Java
+```
 
-## Stack
+```text
+[04] benchmark.log ────────────────────────────────────────────────────
+```
 
-**Linguagens** ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black) ![SQL](https://img.shields.io/badge/SQL-4479A1?logo=postgresql&logoColor=white) ![Java](https://img.shields.io/badge/Java-007396?logo=openjdk&logoColor=white)
+**`#01` &nbsp;[Mangr](https://github.com/mathsarvas-dev/mangr)** <sub>· em desenvolvimento</sub>
+Finanças para casais. Lançamentos entram por texto, áudio ou comprovante, a IA estrutura e a pessoa confirma.
+<sub>`Expo` `Bun` `Hono` `PostgreSQL` `Drizzle` `pg-boss` `Groq`</sub>
 
-**Backend** ![Bun](https://img.shields.io/badge/Bun-000000?logo=bun&logoColor=white) ![Hono](https://img.shields.io/badge/Hono-E36002?logo=hono&logoColor=white) ![Zod](https://img.shields.io/badge/Zod-3E67B1?logo=zod&logoColor=white) ![Better Auth](https://img.shields.io/badge/Better_Auth-000000)
+**`#02` &nbsp;[Cloud foundation](https://github.com/mathsarvas-dev/cloud-foundation)** <sub>· em produção</sub>
+A infraestrutura que publica os meus sistemas na Oracle Cloud, dentro do plano gratuito: VM ARM por script, Docker, HTTPS automático e backup.
+<sub>`Oracle OCI` `Docker` `Caddy` `GitHub Actions` `GHCR`</sub>
 
-**Frontend e mobile** ![React](https://img.shields.io/badge/React-20232A?logo=react&logoColor=61DAFB) ![Next.js](https://img.shields.io/badge/Next.js-000000?logo=nextdotjs&logoColor=white) ![Vite](https://img.shields.io/badge/Vite-646CFF?logo=vite&logoColor=white) ![Expo](https://img.shields.io/badge/Expo-000020?logo=expo&logoColor=white) ![Tailwind](https://img.shields.io/badge/Tailwind-06B6D4?logo=tailwindcss&logoColor=white)
+**`#03` &nbsp;Integra Teens** <sub>· código privado, estudo de caso no [portfólio](https://mathsarvas-dev.github.io/mathsarvas-dev/)</sub>
+CRM de um ministério de adolescentes: funil, líderes em organograma, papéis de acesso e trilha de auditoria.
+<sub>`Next.js` `Prisma` `PostgreSQL` `Docker`</sub>
 
-**Dados** ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?logo=postgresql&logoColor=white) ![Drizzle](https://img.shields.io/badge/Drizzle-C5F74F?logo=drizzle&logoColor=black) ![Prisma](https://img.shields.io/badge/Prisma-2D3748?logo=prisma&logoColor=white)
+**`#04` &nbsp;Acampamento TeensIBP** <sub>· código privado, estudo de caso no [portfólio](https://mathsarvas-dev.github.io/mathsarvas-dev/)</sub>
+Inscrição digital e painel administrativo do acampamento anual, do schema ao deploy.
+<sub>`Hono` `React` `PostgreSQL` `Drizzle` `Brevo`</sub>
 
-**Cloud e DevOps** ![AWS](https://img.shields.io/badge/AWS-232F3E?logo=amazonaws&logoColor=white) ![Oracle Cloud](https://img.shields.io/badge/Oracle_Cloud-F80000?logo=oracle&logoColor=white) ![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white) ![Caddy](https://img.shields.io/badge/Caddy-1F88C0?logo=caddy&logoColor=white) ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?logo=githubactions&logoColor=white) ![Cloudflare](https://img.shields.io/badge/Cloudflare-F38020?logo=cloudflare&logoColor=white) ![Linux](https://img.shields.io/badge/Linux-FCC624?logo=linux&logoColor=black)
+<br>
 
-**IA** ![AWS Bedrock](https://img.shields.io/badge/Amazon_Bedrock-232F3E?logo=amazonaws&logoColor=white) ![Claude](https://img.shields.io/badge/Claude-D97757?logo=anthropic&logoColor=white) ![pgvector](https://img.shields.io/badge/pgvector-4169E1?logo=postgresql&logoColor=white) ![Groq](https://img.shields.io/badge/Groq-F55036) Embeddings, busca vetorial, extração de dados de PDF e áudio, com revisão humana obrigatória.
-
-**Qualidade e observabilidade** ![Storybook](https://img.shields.io/badge/Storybook-FF4785?logo=storybook&logoColor=white) ![New Relic](https://img.shields.io/badge/New_Relic-008C99?logo=newrelic&logoColor=white) ![CloudWatch](https://img.shields.io/badge/CloudWatch-FF4F8B?logo=amazoncloudwatch&logoColor=white) Testes unitários, de integração e de performance. Documentação com OpenAPI, TypeDoc e JSDoc.
-
-## Cloud e infraestrutura
-
-Eu mesmo publico e opero meus sistemas na **Oracle Cloud (Always Free, ARM Ampere A1)**. Detalhes no repositório [**cloud-foundation**](https://github.com/mathsarvas-dev/cloud-foundation):
-
-- Provisionamento automatizado da VM (script OCI CLI que tenta até haver capacidade) e `cloud-init` com Docker, firewall, fuso e swap
-- Imagens publicadas no **GitHub Container Registry** por GitHub Actions, multi-arquitetura (amd64 e arm64)
-- **Caddy** como proxy reverso com HTTPS automático (Let's Encrypt) e cabeçalhos de segurança
-- Postgres só na rede interna do Docker, com backup agendado e migração entre máquinas por dump
-- DNS e túnel na **Cloudflare**, domínio no Registro.br
-
-## Como eu decido
-
-- **Simples primeiro.** Monólito modular antes de microsserviços, fila em cima do Postgres antes de Redis, Docker Compose antes de Kubernetes.
-- **Portável.** A mesma imagem roda em desenvolvimento e produção, sem prender o projeto a um provedor.
-- **Dinheiro é inteiro.** Valores em centavos, migrations versionadas e restrições de integridade no banco.
-- **IA sugere, a pessoa confirma.**
-
----
-
-<div align="center">
-Aberto a oportunidades e conversas sobre produto e engenharia.
-</div>
+```text
+────────────────────────────────────────────────────────────────────────
+  ∵ ⩆ ⩆ ∵        São Paulo, BR        © 2026 · v0.0.1 · [b.64]
+```
