@@ -9,6 +9,7 @@ Construo produtos do banco de dados à nuvem: API, web, mobile, CI/CD e infraest
 
 [![Portfólio](https://img.shields.io/badge/Portf%C3%B3lio-000000?style=for-the-badge&logo=githubpages&logoColor=white)](https://mathsarvas-dev.github.io/mathsarvas-dev/)
 
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/matheus-mosconi-sarvas/)
 [![E-mail](https://img.shields.io/badge/E--mail-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:mamosarvas@gmail.com)
 
 </div>
