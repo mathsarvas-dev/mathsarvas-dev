@@ -18,7 +18,18 @@ Construo produtos do banco de dados à nuvem: API, web, mobile, CI/CD e infraest
 
 ## Sobre
 
-Analista de Desenvolvimento de Sistemas na **Hubble HR Systems** (desde mar/2026) e estudante de Tecnologia em Análise e Desenvolvimento de Sistemas no **Mackenzie** (previsão 2028). Comecei no suporte, entendendo os problemas de quem usa o sistema, e levo esse olhar para tudo que construo. Nos meus projetos pessoais eu decido a stack, modelo os dados, escrevo a API e a interface, automatizo o deploy e mantenho a infraestrutura rodando. Documento o **porquê** de cada decisão técnica, não só o como.
+Analista de Desenvolvimento de Sistemas na **Hubble HR Systems** (desde mar/2026) e estudante de Tecnologia em Análise e Desenvolvimento de Sistemas no **Mackenzie** (previsão 2028), com formações em Full Stack Web Development e Java na **Rocketseat**. Comecei no suporte, entendendo os problemas de quem usa o sistema, e levo esse olhar para tudo que construo. Nos meus projetos pessoais eu decido a stack, modelo os dados, escrevo a API e a interface, automatizo o deploy e mantenho a infraestrutura rodando. Documento o **porquê** de cada decisão técnica, não só o como.
+
+## Trabalho atual
+
+**Hubble HR Systems** · Analista de Desenvolvimento de Sistemas (desde mar/2026)
+
+- Recomendação de vagas com IA: embeddings no Bedrock, pgvector, até 3 currículos por candidato e perfil ideal com filtros
+- Extração de currículos em PDF com modelos Claude e roteador que alterna modelos quando a cota esgota
+- Módulo de helpdesk, central de ajuda, base de conhecimento e relatórios semanais para gestores
+- AWS (VMs, load balancer, target groups), beta e produção, CloudWatch e New Relic
+- GitHub Actions (deploy), documentação automática e testes unitários, de integração e de performance
+- Integrações de agenda com Microsoft e Google e publicação no Google Jobs
 
 ## Projetos em destaque
 
@@ -42,7 +53,9 @@ O Mangr tem a arquitetura pública. Integra Teens e Acampamento TeensIBP têm c�
 
 **Cloud e DevOps** ![Oracle Cloud](https://img.shields.io/badge/Oracle_Cloud-F80000?logo=oracle&logoColor=white) ![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white) ![Caddy](https://img.shields.io/badge/Caddy-1F88C0?logo=caddy&logoColor=white) ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?logo=githubactions&logoColor=white) ![Cloudflare](https://img.shields.io/badge/Cloudflare-F38020?logo=cloudflare&logoColor=white) ![Linux](https://img.shields.io/badge/Linux-FCC624?logo=linux&logoColor=black)
 
-**IA** ![Groq](https://img.shields.io/badge/Groq-F55036) Extração de dados de comprovantes e áudio com revisão humana obrigatória.
+**IA** ![AWS Bedrock](https://img.shields.io/badge/Amazon_Bedrock-232F3E?logo=amazonaws&logoColor=white) ![Claude](https://img.shields.io/badge/Claude-D97757?logo=anthropic&logoColor=white) ![pgvector](https://img.shields.io/badge/pgvector-4169E1?logo=postgresql&logoColor=white) ![Groq](https://img.shields.io/badge/Groq-F55036) Embeddings, busca vetorial, extração de dados de PDF e áudio, com revisão humana obrigatória.
+
+**Qualidade e observabilidade** ![Storybook](https://img.shields.io/badge/Storybook-FF4785?logo=storybook&logoColor=white) ![New Relic](https://img.shields.io/badge/New_Relic-008C99?logo=newrelic&logoColor=white) ![CloudWatch](https://img.shields.io/badge/CloudWatch-FF4F8B?logo=amazoncloudwatch&logoColor=white) Testes unitários, de integração e de performance. Documentação com OpenAPI, TypeDoc e JSDoc.
 
 ## Cloud e infraestrutura
 

@@ -6,7 +6,7 @@
 <title>Matheus Mosconi Sarvas — Portfólio</title>
 <meta name="description" content="Matheus Mosconi Sarvas, analista de desenvolvimento de sistemas. Full stack TypeScript: Bun, React, Postgres e cloud na Oracle OCI.">
 <meta property="og:title" content="Matheus Mosconi Sarvas — Portfólio">
-<meta property="og:description" content="Full stack TypeScript construindo software que serve pessoas.">
+<meta property="og:description" content="Full stack TypeScript, IA aplicada e cloud, construindo software que serve pessoas.">
 <link rel="icon" href="avatar.jpg">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&family=JetBrains+Mono:wght@400;500&display=swap">
 <script src="https://cdn.tailwindcss.com/3.4.17"></script>
@@ -147,21 +147,33 @@ function SectionHead({ idx, title, meta }) {
 }
 
 const SKILLS = [
-  ["linguagem", "TypeScript, JavaScript"],
-  ["frontend", "React, Next.js, Vite, Expo (React Native)"],
-  ["backend", "Bun, Node.js, Hono, better-auth, Drizzle ORM"],
-  ["dados", "PostgreSQL, Drizzle ORM, Prisma, modelagem de schema"],
-  ["infra", "Oracle Cloud (OCI), AWS, Vercel, Caddy, Cloudflare, e-mail transacional (Brevo)"],
-  ["containers", "Docker, Docker Compose, GHCR"],
-  ["versionamento", "GitHub, GitHub Actions (CI/CD)"],
-  ["arquitetura", "Full stack ponta a ponta: schema, API, UI e deploy"],
-  ["documentação", "Decisões de arquitetura registradas em markdown"],
-  ["formação", "Tecnólogo em ADS — Mackenzie (previsão 2028)"],
+  ["linguagem", "TypeScript, JavaScript, Java (em formação)"],
+  ["frontend", "React, Next.js, Vite, Expo, Tailwind, CSS Modules"],
+  ["backend", "Bun, Node.js, Hono, better-auth, Drizzle ORM, Prisma"],
+  ["dados", "PostgreSQL, pgvector, modelagem de schema"],
+  ["ia", "Amazon Bedrock, Claude, embeddings, busca vetorial, roteador de modelos"],
+  ["infra", "AWS, Oracle Cloud, Docker, Caddy, Cloudflare, Vercel"],
+  ["observabilidade", "CloudWatch, New Relic"],
+  ["qualidade", "Testes unitários, de integração e de performance, Storybook"],
+  ["docs e ci/cd", "OpenAPI/Swagger, TypeDoc, JSDoc, GitHub Actions"],
+  ["integrações", "Microsoft e Google (agenda), Google Jobs"],
+  ["arquitetura", "Full stack ponta a ponta: schema, API, UI, deploy e decisões documentadas"],
+  ["formação", "ADS no Mackenzie (2028) · Rocketseat: Full Stack e Java"],
 ];
 
 const EXP = [
-  ["Mar/2026 — atual", "Analista de Desenvolvimento de Sistemas", "Hubble HR Systems", "ATIVO"],
-  ["Ago/2025 — Mar/2026", "Analista de Suporte", "Grupo Hub", "CONCLUÍDO"],
+  ["Mar/2026 — atual", "Analista de Desenvolvimento de Sistemas", "Hubble HR Systems", "ATIVO", [
+    "ai: recomendação de vagas por embeddings (Bedrock + pgvector), até 3 currículos por candidato e perfil ideal com filtros",
+    "ai: extração de currículos em PDF com modelos Claude e roteador que alterna modelos quando a cota esgota",
+    "arch: módulo completo de helpdesk, central de ajuda, base de conhecimento e relatórios semanais para gestores",
+    "ops: AWS com VMs, load balancer, target groups, ambientes beta e produção, logs no CloudWatch e telemetria no New Relic",
+    "ci: workflows de deploy no GitHub Actions, docs automáticas (OpenAPI, TypeDoc, JSDoc, Storybook) e testes unitários, de integração e de performance",
+    "int: agenda Microsoft e Google via API (agendar, ler e exibir) e publicação no Google Jobs",
+    "dev: React, CSS Modules, Tailwind, Docker, skills de IA para o time, atendimento a clientes e debug até a causa raiz"]],
+  ["Ago/2025 — Mar/2026", "Analista de Suporte", "Grupo Hub", "CONCLUÍDO", [
+    "ops: preparação de máquinas para admissão e desligamento, com pacotes iniciais e aplicativos",
+    "ops: cadastros e acessos às ferramentas, controlados em planilhas Excel",
+    "admin: Google Workspace, com criação e remoção de usuários e e-mails, backup e controles administrativos"]],
 ];
 
 const PROJECTS = [
@@ -208,7 +220,7 @@ function Hero() {
             <Decode text="Código" /><br /><Decode text="com precisão." delay={150} />
           </h1>
           <Reveal delay={0.3} className="mt-8 max-w-xl">
-            <p className="text-lg text-[#bdbdbd]">Matheus Mosconi Sarvas. Analista de Desenvolvimento de Sistemas na Hubble HR Systems. Full stack TypeScript construindo software que serve pessoas.</p>
+            <p className="text-lg text-[#bdbdbd]">Matheus Mosconi Sarvas. Analista de Desenvolvimento de Sistemas na Hubble HR Systems. Full stack TypeScript, IA aplicada e cloud, construindo software que serve pessoas.</p>
             <div className="mono text-xs mt-6 flex flex-wrap gap-3">
               <a href="#projetos" className="px-4 py-2 bg-white text-black rounded-sm hover:bg-[#d8d8d8] transition-colors">ver_projetos →</a>
               <a href="#contato" className="px-4 py-2 border border-white/20 rounded-sm hover:border-white/60 transition-colors">contato</a>
@@ -226,12 +238,12 @@ function About() {
       <SectionHead idx="01" title="Sobre / Skills" meta="README.md" />
       <div className="grid md:grid-cols-[1fr_1.4fr] gap-10">
         <Reveal>
-          <p className="text-xl text-[#d0d0d0] leading-relaxed">Comecei no suporte, entendendo problemas reais de quem usa o sistema. Hoje desenvolvo software na Hubble, e levo esse olhar para tudo que construo.</p>
+          <p className="text-xl text-[#d0d0d0] leading-relaxed">Comecei no suporte, entendendo problemas reais de quem usa o sistema. Hoje desenvolvo software na Hubble, do front-end à infraestrutura na AWS, com IA aplicada à plataforma, e levo esse olhar para tudo que construo.</p>
           <p className="mono text-xs text-[#8a8a8a] mt-6">// decisões, não strings.</p>
         </Reveal>
         <Reveal delay={0.1}>
           <div className="glass relative p-6 pt-10 pb-10 mono text-sm">
-            <Corners a="$ cat skills.conf" b="[b.64]" c="utf-8" d="10 rows" />
+            <Corners a="$ cat skills.conf" b="[b.64]" c="utf-8" d={SKILLS.length + " rows"} />
             {SKILLS.map(([k, v]) => (
               <div key={k} className="grid grid-cols-[130px_1fr] gap-3 py-2.5 border-b border-white/10 last:border-0">
                 <span className="text-[#8a8a8a]">{k}</span><span>{v}</span>
@@ -249,11 +261,11 @@ function Experience() {
     <section id="exp" className="max-w-6xl mx-auto px-5 py-28">
       <SectionHead idx="02" title="Trajetória" meta="git log --career" />
       <div className="border-t border-white/10">
-        {EXP.map(([date, role, org, st], i) => (
+        {EXP.map(([date, role, org, st, log], i) => (
           <Reveal key={role} delay={i * 0.08}>
             <div className="grid md:grid-cols-[200px_1fr_auto] gap-2 md:gap-8 py-7 border-b border-white/10 items-baseline hover:bg-white/[0.02] transition-colors">
               <span className="mono text-xs text-[#8a8a8a]">{date}</span>
-              <div><div className="text-xl font-medium">{role}</div><div className="mono text-sm text-[#8a8a8a] mt-1">@ {org}</div></div>
+              <div><div className="text-xl font-medium">{role}</div><div className="mono text-sm text-[#8a8a8a] mt-1">@ {org}</div><div className="mono text-xs mt-4 space-y-1.5">{log.map((l) => <div key={l} className="text-[#8a8a8a]">&gt; {l}</div>)}</div></div>
               <span className="mono text-[10px] border border-white/20 px-2 py-1 rounded-sm">{st}</span>
             </div>
           </Reveal>
