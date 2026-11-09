@@ -22,8 +22,8 @@
 ```text
 [02] git log --career ─────────────────────────────────────────────────
 
-  mar/2026 — atual   Analista de Desenvolvimento de Sistemas   @ Hubble HR Systems   ATIVO
-  ago/2025 — mar/2026 Analista de Suporte                      @ Grupo Hub           CONCLUÍDO
+  mar/2026 — atual     Analista de Desenvolvimento de Sistemas  @ Hubble HR Systems  ATIVO
+  ago/2025 — mar/2026  Analista de Suporte                      @ Grupo Hub          CONCLUÍDO
 
   hubble
   > ai    recomendação de vagas por embeddings (Bedrock + pgvector)
