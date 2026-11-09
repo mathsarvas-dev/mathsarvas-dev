@@ -27,7 +27,7 @@ Analista de Desenvolvimento de Sistemas na **Hubble HR Systems** (desde mar/2026
 - Recomendação de vagas com IA: embeddings no Bedrock, pgvector, até 3 currículos por candidato e perfil ideal com filtros
 - Extração de currículos em PDF com modelos Claude e roteador que alterna modelos quando a cota esgota
 - Módulo de helpdesk, central de ajuda, base de conhecimento e relatórios semanais para gestores
-- AWS (VMs, load balancer, target groups), beta e produção, CloudWatch e New Relic
+- AWS (EC2, ECS, ECR, load balancer, target groups), beta e produção, CloudWatch e New Relic
 - GitHub Actions (deploy), documentação automática e testes unitários, de integração e de performance
 - Integrações de agenda com Microsoft e Google e publicação no Google Jobs
 
@@ -51,7 +51,7 @@ O Mangr tem a arquitetura pública. Integra Teens e Acampamento TeensIBP têm c�
 
 **Dados** ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?logo=postgresql&logoColor=white) ![Drizzle](https://img.shields.io/badge/Drizzle-C5F74F?logo=drizzle&logoColor=black) ![Prisma](https://img.shields.io/badge/Prisma-2D3748?logo=prisma&logoColor=white)
 
-**Cloud e DevOps** ![Oracle Cloud](https://img.shields.io/badge/Oracle_Cloud-F80000?logo=oracle&logoColor=white) ![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white) ![Caddy](https://img.shields.io/badge/Caddy-1F88C0?logo=caddy&logoColor=white) ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?logo=githubactions&logoColor=white) ![Cloudflare](https://img.shields.io/badge/Cloudflare-F38020?logo=cloudflare&logoColor=white) ![Linux](https://img.shields.io/badge/Linux-FCC624?logo=linux&logoColor=black)
+**Cloud e DevOps** ![AWS](https://img.shields.io/badge/AWS-232F3E?logo=amazonaws&logoColor=white) ![Oracle Cloud](https://img.shields.io/badge/Oracle_Cloud-F80000?logo=oracle&logoColor=white) ![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white) ![Caddy](https://img.shields.io/badge/Caddy-1F88C0?logo=caddy&logoColor=white) ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?logo=githubactions&logoColor=white) ![Cloudflare](https://img.shields.io/badge/Cloudflare-F38020?logo=cloudflare&logoColor=white) ![Linux](https://img.shields.io/badge/Linux-FCC624?logo=linux&logoColor=black)
 
 **IA** ![AWS Bedrock](https://img.shields.io/badge/Amazon_Bedrock-232F3E?logo=amazonaws&logoColor=white) ![Claude](https://img.shields.io/badge/Claude-D97757?logo=anthropic&logoColor=white) ![pgvector](https://img.shields.io/badge/pgvector-4169E1?logo=postgresql&logoColor=white) ![Groq](https://img.shields.io/badge/Groq-F55036) Embeddings, busca vetorial, extração de dados de PDF e áudio, com revisão humana obrigatória.
 
