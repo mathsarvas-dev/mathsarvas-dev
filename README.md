@@ -6,9 +6,9 @@
 
 <img src="assets/sobre.svg" alt="Sobre: comecei no suporte, olhando o problema de quem usa o sistema. Hoje escrevo o sistema, do schema do banco ao deploy." width="100%">
 
-<img src="assets/trajetoria.svg" alt="Trajetória: Analista de Desenvolvimento de Sistemas na Hubble HR Systems desde mar/2026 (IA com Bedrock e pgvector, helpdesk, AWS, CI/CD, integrações de agenda). Antes, Analista de Suporte no Grupo Hub." width="100%">
+<img src="assets/trajetoria.svg" alt="Trajetória: Analista de Desenvolvimento de Sistemas na Hubble HR Systems desde mar/2026 (IA com Bedrock e pgvector, helpdesk, AWS, site com SEO e analytics, BI, CI/CD, integrações de agenda). Antes, Analista de Suporte no Grupo Hub." width="100%">
 
-<img src="assets/skills.svg" alt="Skills: TypeScript, JavaScript, React, Next.js, Bun, Node.js, Hono, PostgreSQL, pgvector, Amazon Bedrock, Claude, AWS, Oracle Cloud, Docker, CloudWatch, New Relic, testes automatizados." width="100%">
+<img src="assets/skills.svg" alt="Skills: TypeScript, JavaScript, React, Next.js, Bun, Node.js, Hono, PostgreSQL, pgvector, Amazon Bedrock, Claude, AWS, Oracle Cloud, Docker, CloudWatch, New Relic, Google Analytics, Microsoft Clarity, SEO, BI, testes automatizados." width="100%">
 
 <img src="assets/projetos.svg" alt="Projetos" width="100%">
 
